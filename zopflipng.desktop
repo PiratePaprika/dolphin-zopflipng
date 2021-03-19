@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+Icon=image-png
+MimeType=image/png;
+Actions=zopflipng;
+
+
+[Desktop Action zopflipng]
+Name=Optimize with zopflipng
+Icon=image-png
+Exec=(d="$(dirname "%f")" && z="$(zopflipng -y "%f" "%f")"; (kdialog --title "Optimize %f" --msgbox "<pre>$(echo "$z" | sed "s*${d}/**")</pre>" || true))
