@@ -7,6 +7,6 @@ Actions=zopflipng;
 
 
 [Desktop Action zopflipng]
-Name=Optimize with zopflipng
+Name=Compress with ZopfliPNG
 Icon=image-png
 Exec=(d="$(dirname "%f")" && z="$(zopflipng -y "%f" "%f")"; (kdialog --title "Optimize %f" --msgbox "<pre>$(echo "$z" | sed "s*${d}/**")</pre>" || true))
