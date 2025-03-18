@@ -11,4 +11,4 @@ Name=Compress with ZopfliPNG
 Name[nl]=Comprimeren met ZopfliPNG
 Name[ru]=Сжать с помощью ZopfliPNG
 Icon=image-png
-Exec=(d="$(dirname "%f")" && z="$(zopflipng -y "%f" "%f")"; (kdialog --title "Optimize %f" --msgbox "<pre>$(echo "$z" | sed "s*${d}/**")</pre>" || true))
+Exec=(f=%f; d="$(dirname "$f")" && z="$(zopflipng -y "$f" "$f")"; (kdialog --title "Optimize $f" --msgbox "<pre>$(echo "$z" | sed "s*${d}/**")</pre>" || true))
